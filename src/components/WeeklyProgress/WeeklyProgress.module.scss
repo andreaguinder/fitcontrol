@@ -1,0 +1,56 @@
+@import '@/styles/variables';
+
+
+.progressContainer {
+  background-color: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+
+    h2 {
+      font-size: 1.2rem;
+      color: $color-secondary;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: $color-primary;
+    }
+  }
+
+  .stats {
+    font-size: 0.85rem;
+    color: $color-grey;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
+
+// Estilos de la barra de progreso
+.barTrack {
+  width: 100%;
+  height: 12px;
+  background-color: rgba($color-grey, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background-color: $color-primary;
+  background: linear-gradient(90deg, $color-primary 0%, $accent-color 100%);
+  border-radius: 20px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

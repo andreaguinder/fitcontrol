@@ -1,0 +1,18 @@
+
+$bg-card : #f2fbfc;
+$border-color: #7cd8fa;
+$accent-color: #eafefd;
+$color-primary: #057386;
+$color-secondary: #033561;
+$color-text-white: #FFFFFF;
+$color-text-black: #000000;
+$color-grey: #f3f1f1;
+
+
+@mixin flexCenter ($direct) {
+    display: flex;
+    flex-direction: $direct;
+    align-items: center;
+    justify-content:center;
+}
+

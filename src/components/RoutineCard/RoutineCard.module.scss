@@ -1,0 +1,93 @@
+@import '@/styles/variables';
+
+
+.card {
+  background-color: $bg-card;
+  border: 2px solid $border-color;
+  border-radius: 12px;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+  @include flexCenter(column);
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+
+  // Clase que se activa cuando está completado
+  &.completed {
+    border-color: $color-primary;
+    background-color: $accent-color; // Un verde transparente sutil
+  }
+  
+
+  .dayContainer {
+@include flexCenter(row);
+justify-content: space-between;
+width: 100%;
+
+        .day {
+      color: $color-secondary;
+      font-size: 24px;
+    }
+
+    .checkboxContainer {
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+    appearance: none;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $border-color;
+        cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+
+    &:checked {
+      background-color: $color-primary;
+      border: none;
+
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 4px;
+        height: 8px;
+        border: solid $color-text-white;
+        border-width: 0 2px 2px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+        
+
+    }
+  }
+
+  }
+    .title {
+        font-size: 20px;
+        color: $color-primary;
+        font-weight: 600;
+    }
+
+    .description {
+font-size: 14px;
+font-weight: 400;
+    }
+
+    .durationMinutos {
+font-size: 16px;
+color: $color-primary;
+font-weight: 500;
+    }
+
+    .exercises {
+font-size: 14px;
+@include flexCenter(row);
+justify-content: space-between;
+width: 100%;
+font-weight: 400;
+    }
+  }
