@@ -7,9 +7,10 @@ import Footer from "@/components/Footer/Footer";
 export const metadata: Metadata = {
   title: "FitControl",
   description: "Tu app para controlar tu progreso en el gimnasio y mantenerte motivado",
+manifest: '/manifest.json',
+  themeColor: '#057386',    
 
-
-metadataBase: new URL('https://tudominio.com'), 
+metadataBase: new URL('https://fitcontrol-guinder.vercel.app'), 
   
   // Configuración de Favicons e Iconos
   icons: {
@@ -27,7 +28,7 @@ metadataBase: new URL('https://tudominio.com'),
   openGraph: {
     title: 'FitControl - Tu Gestor de Rutinas',
     description: 'Tu app para controlar tu progreso en el gimnasio y mantenerte motivado.',
-    url: 'https://tudominio.com',
+    url: 'https://fitcontrol-guinder.vercel.app',
     siteName: 'FitControl',
     images: [
       {
