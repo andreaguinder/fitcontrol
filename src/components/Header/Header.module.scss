@@ -40,6 +40,10 @@
     transform: rotate(45deg);
     background-color: rgba($color-text-white, 0.2);
   }
+
+  svg {
+    color: $color-grey;
+  }
 }
 
 .popover {
@@ -106,11 +110,13 @@
     border-radius: 6px;
     background-color: transparent;
     color: $color-secondary;
-    font-size: 0.82rem;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     text-align: left;
     transition: all 0.2s ease;
+    @include flexCenter(row);
+    gap: 8px;
 
     &:hover {
       background-color: $color-primary;

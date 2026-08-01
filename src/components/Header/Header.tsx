@@ -6,6 +6,7 @@ import { useLocalStorage } from "@/hooks/useLocalStorage";
 import mockRoutines from "@/data/mockRoutines";
 import { Routine } from "@/types/workout";
 import styles from "./Header.module.scss";
+import {  RotateCcw, Save, Settings } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +60,7 @@ export default function Header() {
           aria-label="Configuración"
           title="Configuración"
         >
-          ⚙️
+          <Settings />
         </button>
 
         {isOpen && (
@@ -75,11 +76,11 @@ export default function Header() {
 
             <div className={styles.actions}>
               <button className={styles.actionBtn} onClick={handleExport}>
-                💾 Guardar copia
+                <Save /> Guardar copia
               </button>
 
               <button className={styles.actionBtn} onClick={() => fileInputRef.current?.click()}>
-                📥 Restaurar copia
+                <RotateCcw /> Restaurar copia
               </button>
 
               <input 

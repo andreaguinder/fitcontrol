@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { Routine, Exercise } from "@/types/workout";
 import styles from "./RoutineCard.module.scss";
+import {  SquarePen} from "lucide-react";
 
 interface RoutineCardProps {
   routine: Routine;
@@ -46,7 +47,7 @@ export default function RoutineCard({ routine, onToggle, onUpdate }: RoutineCard
             className={styles.editBtn} 
             onClick={() => setIsEditing(!isEditing)}
           >
-            {isEditing ? 'Cerrar' : 'Editar'}
+            {isEditing ? 'Cerrar' : <SquarePen/>}
           </button>
           
           <div className={styles.checkboxContainer}>
