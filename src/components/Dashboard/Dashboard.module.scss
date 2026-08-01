@@ -5,6 +5,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
     margin: 30px auto;
+    align-items: start;
 }
 
 @media screen and (min-width:768px) {
@@ -18,7 +19,43 @@
 @media screen and (min-width:1024px) {
 
         .containerRoutines {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 16px;
     }
+}
+
+.dashboard {
+  width: 100%;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.actionsBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.resetBtn {
+  background-color: transparent;
+  border: 1px solid $color-primary;
+  color: $color-secondary;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0px 0px 16px;
+
+  &:hover {
+    background-color: rgba($color-secondary, 0.08);
+    border-color: $color-secondary;
+  }
 }

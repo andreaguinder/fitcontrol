@@ -11,6 +11,9 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       const item = window.localStorage.getItem(key);
       if (item) {
         setStoredValue(JSON.parse(item));
+      }else {
+        // 💡 Si es la primera vez, guarda el mock inicial
+        window.localStorage.setItem(key, JSON.stringify(initialValue));
       }
     } catch (error) {
       console.error("Error al leer localStorage:", error);
