@@ -31,7 +31,7 @@
 
   .stats {
     font-size: 0.85rem;
-    color: $color-grey;
+    color: $color-secondary;
     margin-top: 0.6rem;
     margin-bottom: 0;
     text-align: right;
@@ -42,7 +42,7 @@
 .barTrack {
   width: 100%;
   height: 12px;
-  background-color: rgba($color-grey, 0.2);
+  background-color:$color-grey;
   border-radius: 20px;
   overflow: hidden;
 }
